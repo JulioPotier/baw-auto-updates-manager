@@ -15,7 +15,6 @@ defined( 'ABSPATH' ) or	die( 'Cheatin\' uh?' );
 if( is_admin() ) {
 
 define( 'BAWAUM_VERSION', '1.5' );
-define( 'BAWAUM__FILE__', __FILE__ );
 define( 'BAWAUM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 add_action( 'plugins_loaded', 'bawaum_add_l10n' );
