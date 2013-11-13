@@ -2,7 +2,7 @@
 /*
 Plugin Name: BAW Auto Updates Manager
 Plugin URI: http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-automatiques-7714.html
-Version: 1.4
+Version: 1.5
 Description: You can now select which plugin and theme can be autoupdated, just check this box! &mdash;&mdash;&rarr;
 Author: Julio Potier
 Author URI: http://boiteaweb.fr
@@ -10,7 +10,7 @@ Author URI: http://boiteaweb.fr
 
 if( is_admin() ) {
 
-define( 'BAWAUM_VERSION', '1.4' );
+define( 'BAWAUM_VERSION', '1.5' );
 define( 'BAWAUM__FILE__', __FILE__ );
 define( 'BAWAUM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
