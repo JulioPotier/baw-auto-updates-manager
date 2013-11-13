@@ -299,7 +299,7 @@ function bawaum_field_active()
 	?>
 	<em><?php _e( 'If you need, you can easily disable all automatic updates.', 'bawaum' ); ?></em><br />
 		<label><input type="radio" name="bawaum_disabled" value="1" <?php checked( $bawaum_disabled, true ); ?>/> <?php _e( 'Deactivate now, all future automatic updates.', 'bawaum' ); ?></label><br />
-		<label><input type="radio" name="bawaum_disabled" value="0" <?php checked( $bawaum_disabled, false ); ?>/> <?php _e( 'Let the automatic updates do their job!', 'bawaum' ); ?></label><br />
+		<label><input type="radio" name="bawaum_disabled" value="0" <?php checked( $bawaum_disabled, false ); ?>/> <?php _e( 'Let the automatic updates do their job! <em>(Default)</em>', 'bawaum' ); ?></label><br />
 		<em>&rsaquo; 
 		<?php 
 		if( $disabled )
@@ -334,7 +334,7 @@ function bawaum_field_core()
 	?>
 	<em><?php printf( __( 'What kind of updates do you need for the <b>%s</b>?', 'bawaum' ), __( 'core', 'bawaum' ) ); ?></em><br />
 		<label><input type="radio" name="bawaum_core" value="0" <?php checked( $bawaum_core, 0 ); ?>/> <?php printf( __( 'Never update %s automatically.', 'bawaum' ), __( 'core', 'bawaum' ) ); ?></label><br />
-		<label><input type="radio" name="bawaum_core" value="1" <?php checked( $bawaum_core, 1 ); ?>/> <?php _e( 'Update automatically only minor versions. <em>(default)</em>', 'bawaum' ); ?></label><br />
+		<label><input type="radio" name="bawaum_core" value="1" <?php checked( $bawaum_core, 1 ); ?>/> <?php _e( 'Update automatically only minor versions. <em>(Default)</em>', 'bawaum' ); ?></label><br />
 		<label><input type="radio" name="bawaum_core" value="2" <?php checked( $bawaum_core, 2 ); ?>/> <?php printf( __( 'Always update all %s automatically.', 'bawaum' ), __( 'versions', 'bawaum' ) ); ?></label>
 	<?php
 }
@@ -383,12 +383,12 @@ function bawaum_field_email()
 	?>
 	<em><?php _e( 'Do you want to receive an email for ...', 'bawaum' ); ?></em><br />
 		<label><input type="radio" name="bawaum_sendemail" value="0" <?php checked( $bawaum_sendemail, 0 ); ?>/> <?php _e( 'Sorry, i don\'t want any mail.', 'bawaum' ); ?></label><br />
-		<label><input type="radio" name="bawaum_sendemail" value="1" <?php checked( $bawaum_sendemail, 1 ); ?>/> <?php _e( '... this cases: <em>(check 1 or more box below)</em>', 'bawaum' ); ?></label><br /><br />
+		<label><input type="radio" name="bawaum_sendemail" value="1" <?php checked( $bawaum_sendemail, 1 ); ?>/> <?php _e( '... this cases: <em>(All by Default, check 1 or more box below)</em>', 'bawaum' ); ?></label><br /><br />
 
 		<label><input type="checkbox" name="bawaum_sendemail_s_u" value="1" <?php checked( $bawaum_sendemail_s_u, 1 ); ?>/> <?php _e( 'For successful updates.', 'bawaum' ); ?></label><br />
 		<label><input type="checkbox" name="bawaum_sendemail_f_u" value="1" <?php checked( $bawaum_sendemail_f_u, 1 ); ?>/> <?php _e( 'For failed updates.', 'bawaum' ); ?></label><br />
 		<label><input type="checkbox" name="bawaum_sendemail_c_u" value="1" <?php checked( $bawaum_sendemail_c_u, 1 ); ?>/> <?php _e( 'For critical updates.', 'bawaum' ); ?></label><br /><br />
-		<label><input type="checkbox" name="bawaum_sendemail_debug" value="1" <?php checked( $bawaum_sendemail_debug, 1 ); ?>/> <?php _e( 'Send me an extra debug mail.', 'bawaum' ); ?></label>
+		<label><input type="checkbox" name="bawaum_sendemail_debug" value="1" <?php checked( $bawaum_sendemail_debug, 1 ); ?>/> <?php _e( 'Send me an extra debug mail. <em>(Default if Nightly build)</em>', 'bawaum' ); ?></label>
 	<?php
 }
 
@@ -397,7 +397,7 @@ function bawaum_field_plugins()
 	$bawaum_plugins = (int)get_option( 'bawaum_plugins' );
 	?>
 	<em><?php printf( __( 'What kind of updates do you need for the <b>%s</b>?', 'bawaum' ), __( 'plugins', 'bawaum' ) ); ?></em><br />
-		<label><input type="radio" name="bawaum_plugins" value="0" <?php checked( $bawaum_plugins, 0 ); ?>/> <?php printf( __( 'Never update %s automatically. <em>(default)</em>', 'bawaum' ), __( 'plugins', 'bawaum' ) ); ?></label><br />
+		<label><input type="radio" name="bawaum_plugins" value="0" <?php checked( $bawaum_plugins, 0 ); ?>/> <?php printf( __( 'Never update %s automatically. <em>(Default)</em>', 'bawaum' ), __( 'plugins', 'bawaum' ) ); ?></label><br />
 		<label><input type="radio" name="bawaum_plugins" value="1" <?php checked( $bawaum_plugins, 1 ); ?>/> <?php printf( __( 'Update automatically only <a href="%s">the chosen one</a>.', 'bawaum' ), admin_url( 'plugins.php' ) ); ?></label><br />
 		<label><input type="radio" name="bawaum_plugins" value="2" <?php checked( $bawaum_plugins, 2 ); ?>/> <?php printf( __( 'Always update all %s automatically.', 'bawaum' ), __( 'plugins', 'bawaum' ) ); ?></label>
 	<?php
@@ -408,7 +408,7 @@ function bawaum_field_themes()
 	$bawaum_themes = (int)get_option( 'bawaum_themes' );
 	?>
 	<em><?php printf( __( 'What kind of updates do you need for the <b>%s</b>?', 'bawaum' ), __( 'theme', 'bawaum' ) ); ?></em><br />
-		<label><input type="radio" name="bawaum_themes" value="0" <?php checked( $bawaum_themes, 0 ); ?>/> <?php printf( __( 'Never update %s automatically. <em>(default)</em>', 'bawaum' ), __( 'themes', 'bawaum' ) ); ?></label><br />
+		<label><input type="radio" name="bawaum_themes" value="0" <?php checked( $bawaum_themes, 0 ); ?>/> <?php printf( __( 'Never update %s automatically. <em>(Default)</em>', 'bawaum' ), __( 'themes', 'bawaum' ) ); ?></label><br />
 		<label><input type="radio" name="bawaum_themes" value="1" <?php checked( $bawaum_themes, 1 ); ?>/> <?php printf( __( 'Update automatically only <a href="%s">the chosen one</a>.', 'bawaum' ), admin_url( 'themes.php' ) ); ?></label><br />
 		<label><input type="radio" name="bawaum_themes" value="2" <?php checked( $bawaum_themes, 2 ); ?>/> <?php printf( __( 'Always update all %s automatically.', 'bawaum' ), __( 'themes', 'bawaum' ) ); ?></label>
 	<?php
@@ -421,8 +421,15 @@ function bawaum_field_l10n()
 	?>
 	<em><?php printf( __( 'What kind of updates do you need for the <b>%s</b>?', 'bawaum' ), __( 'translations', 'bawaum' ) ); ?></em><br />
 		<label><input type="radio" name="bawaum_l10n" value="0" <?php checked( $bawaum_l10n, 0 ); ?>/> <?php printf( __( 'Never update %s automatically.', 'bawaum' ), __( 'translations', 'bawaum' ) ); ?></label><br />
-		<label><input type="radio" name="bawaum_l10n" value="1" <?php checked( $bawaum_l10n, 1 ); ?>/> <?php printf( __( 'Always update all %s automatically. <em>(default)</em>', 'bawaum' ), __( 'translations', 'bawaum' ) ); ?></label>
+		<label><input type="radio" name="bawaum_l10n" value="1" <?php checked( $bawaum_l10n, 1 ); ?>/> <?php printf( __( 'Always update all %s automatically. <em>(Default)</em>', 'bawaum' ), __( 'translations', 'bawaum' ) ); ?></label>
 	<?php
+}
+
+add_filter( 'automatic_updates_is_vcs_checkout', 'bawaum_updates_svn' );
+function bawaum_updates_svn( $checkout )
+{
+	$bawaum_svncheckout = get_option( 'bawaum_svncheckout' );
+	return $bawaum_svncheckout === false ? true : (bool)$bawaum_svncheckout;
 }
 
 add_filter( 'auto_update_plugin', 'bawaum_update_this_plugins', 10, 2 );
@@ -513,6 +520,31 @@ function bawaum_automatic_updates_send_debug_email()
 {
 	$bawaum_sendemail_debug = (bool)get_option( 'bawaum_sendemail_debug' );
 	return $bawaum_sendemail_debug;
+}
+
+add_action( 'admin_init', 'bawaum_github_plugin_updater' );
+function bawaum_github_plugin_updater() {
+
+	include_once( '/updater/updater.php' );
+
+	define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+	$config = array(
+		'slug' => plugin_basename( __FILE__ ),
+		'proper_folder_name' => 'baw-auto-updates-manager',
+		'api_url' => 'https://api.github.com/repos/BoiteAWeb/baw-auto-updates-manager',
+		'raw_url' => 'https://raw.github.com/BoiteAWeb/baw-auto-updates-manager/master',
+		'github_url' => 'https://github.com/BoiteAWeb/baw-auto-updates-manager',
+		'zip_url' => 'https://github.com/BoiteAWeb/Wbaw-auto-updates-manager/archive/master.zip',
+		'sslverify' => true,
+		'requires' => '3.7',
+		'tested' => '3.7',
+		'readme' => 'readme.txt',
+		'access_token' => '',
+	);
+
+	new WP_GitHub_Updater( $config );
+
 }
 
 }
