@@ -3,7 +3,7 @@ Contributors: juliobox
 Tags: autoupdate
 Requires at least: 3.7
 Tested up to: 3.8-alpha
-Stable tag: trunk
+Stable tag: 1.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,12 +27,13 @@ Bonus : you can force an autoupdate with 1 single click.
 
 == Screenshots ==
 1. The settings page in the "Dashboard -> updates" Menu
-2. A plugin, not allowed for auto updates
-3. A plugin, now allowed for auto updates
-4. Current theme, not allowed for auto updates
-5. Current theme, now allowed for auto updates
-6. Another theme, not allowed for auto updates
-7. Another theme, now allowed for auto updates
+2. Meme chose en francais
+3. A plugin, not allowed for auto updates
+4. A plugin, now allowed for auto updates
+5. Current theme, not allowed for auto updates
+6. Current theme, now allowed for auto updates
+7. Another theme, not allowed for auto updates
+8. Another theme, now allowed for auto updates
 
 == Changelog ==
 
@@ -40,6 +41,7 @@ Bonus : you can force an autoupdate with 1 single click.
 * 13 nov 2013
 * Add an Auto-updater for this plugin, via github, Thanks to Joachim Kudish - https://github.com/jkudish/WordPress-GitHub-Plugin-Updater
 * French l10n
+* Add a pointer
 * Initial GitHub release.
 
 = 1.4 =

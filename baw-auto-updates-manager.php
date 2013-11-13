@@ -1,18 +1,28 @@
 <?php
 /*
 Plugin Name: BAW Auto Updates Manager
-Plugin URI: http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-automatiques-7714.html
 Version: 1.5
 Description: You can now select which plugin and theme can be autoupdated, just check this box! &mdash;&mdash;&rarr;
+Plugin URI: http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-automatiques-7714.html
 Author: Julio Potier
 Author URI: http://boiteaweb.fr
+Text Domain: baw-auto-updates-manager
+Domain Path: /lang
 */
+
+defined( 'ABSPATH' ) or	die( 'Cheatin\' uh?' );
 
 if( is_admin() ) {
 
 define( 'BAWAUM_VERSION', '1.5' );
 define( 'BAWAUM__FILE__', __FILE__ );
 define( 'BAWAUM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+add_action( 'plugins_loaded', 'bawaum_add_l10n' );
+function bawaum_add_l10n()
+{
+	load_plugin_textdomain( 'bawaum', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+}
 
 add_action( 'manage_plugins_custom_column', 'bawaum_manage_plugins_custom_column', 10, 2 );
 function bawaum_manage_plugins_custom_column( $column_name, $plugin_file )
@@ -110,7 +120,7 @@ function bawaum_theme_action_links( $actions )
 	if( isset( $actions['activate'] ) ) {
 		$theme = preg_replace( '/<a(.*?)href="(.*?)"(.*?)>(.*?)<\/a>/', '$2', $actions['activate'] );
 		parse_str( $theme, $theme );
-		$theme = $theme['amp;template']; //// amp; ??? o_O
+		$theme = $theme['amp;template']; ////
 		$url = wp_nonce_url( admin_url('admin-post.php?action=autoupdatetheme&theme='.$theme), 'autoupdate_'. $theme);
 		if( $themes_ok && in_array( $theme, $themes_ok ) )
 			$actions['autoupdatetheme'] = '<a class="autoupdate_link" href="'.$url.'"><span class="icon-aum icon-checkbox-checked"></span> AutoUpdate</a>';
@@ -525,9 +535,10 @@ function bawaum_automatic_updates_send_debug_email()
 add_action( 'admin_init', 'bawaum_github_plugin_updater' );
 function bawaum_github_plugin_updater() {
 
-	include_once( '/updater/updater.php' );
-
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
+	include_once( '/inc/updater.php' );
+
+	include_once( '/inc/pointers.php' );
 
 	$config = array(
 		'slug' => plugin_basename( __FILE__ ),
@@ -535,16 +546,40 @@ function bawaum_github_plugin_updater() {
 		'api_url' => 'https://api.github.com/repos/BoiteAWeb/baw-auto-updates-manager',
 		'raw_url' => 'https://raw.github.com/BoiteAWeb/baw-auto-updates-manager/master',
 		'github_url' => 'https://github.com/BoiteAWeb/baw-auto-updates-manager',
-		'zip_url' => 'https://github.com/BoiteAWeb/Wbaw-auto-updates-manager/archive/master.zip',
+		'zip_url' => 'https://github.com/BoiteAWeb/baw-auto-updates-manager/archive/master.zip',
 		'sslverify' => true,
 		'requires' => '3.7',
-		'tested' => '3.7',
+		'tested' => '3.8-alpha',
 		'readme' => 'readme.txt',
 		'access_token' => '',
 	);
 
 	new WP_GitHub_Updater( $config );
 
+}
+
+add_filter( 'plugins_api', 'bawaum_force_info', 11, 3 );
+function bawaum_force_info( $bool, $action, $args )
+{
+	if( $action=='plugin_information' && $args->slug=='baw-auto-updates-manager' )
+		return new stdClass();
+	return $bool;
+}
+
+add_filter( 'plugins_api_result', 'bawaum_force_info_result', 10, 3 );
+function bawaum_force_info_result( $res, $action, $args )
+{
+	if( $action=='plugin_information' && $args->slug=='baw-auto-updates-manager' && isset( $res->external ) && $res->external ) {
+		$request = wp_remote_get( 'https://raw.github.com/BoiteAWeb/baw-auto-updates-manager/master/plugin_infos.txt', array( 'timeout' => 30 ) );
+		if ( is_wp_error( $request ) ) {
+			$res = new WP_Error('plugins_api_failed', '1) '.__( 'An unexpected error occurred. Something may be wrong with Auto Updates Manager or this server&#8217;s configuration.' ), $request->get_error_message() );
+		} else {
+			$res = maybe_unserialize( wp_remote_retrieve_body( $request ) );
+			if ( ! is_object( $res ) && ! is_array( $res ) )
+				$res = new WP_Error('plugins_api_failed', '2) '.__( 'An unexpected error occurred. Something may be wrong with Auto Updates Manager or this server&#8217;s configuration.' ), wp_remote_retrieve_body( $request ) );
+		}
+	}
+	return $res;
 }
 
 }
