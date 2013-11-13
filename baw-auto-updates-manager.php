@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: BAW Auto Updates Manager
-Version: 1.5
+Version: 1.5.1
 Description: You can now select which plugin and theme can be autoupdated, just check this box! &mdash;&mdash;&rarr;
 Plugin URI: http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-automatiques-7714.html
 Author: Julio Potier
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) or	die( 'Cheatin\' uh?' );
 
 if( is_admin() ) {
 
-define( 'BAWAUM_VERSION', '1.5' );
+define( 'BAWAUM_VERSION', '1.5.1' );
 define( 'BAWAUM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 add_action( 'plugins_loaded', 'bawaum_add_l10n' );
@@ -495,7 +495,7 @@ function bawaum_automatic_updater_disabled( $disabled )
 	return $bawaum_disabled;
 }
 
-add_filter( 'send_core_update_notification_email', 'bawaum_send_core_update_notification_email' );
+// add_filter( 'send_core_update_notification_email', 'bawaum_send_core_update_notification_email' );
 function bawaum_send_core_update_notification_email( $notify )
 {
 	$bawaum_sendemail = (bool)get_option( 'bawaum_sendemail' );
@@ -532,12 +532,12 @@ function bawaum_automatic_updates_send_debug_email()
 }
 
 add_action( 'admin_init', 'bawaum_github_plugin_updater' );
-function bawaum_github_plugin_updater() {
-
+function bawaum_github_plugin_updater()
+{
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
-	include_once( '/inc/updater.php' );
+	include_once( dirname( __FILE__ ) . '/inc/updater.php' );
 
-	include_once( '/inc/pointers.php' );
+	include_once( dirname( __FILE__ ) . '/inc/pointers.php' );
 
 	$config = array(
 		'slug' => plugin_basename( __FILE__ ),

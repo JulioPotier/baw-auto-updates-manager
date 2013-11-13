@@ -3,7 +3,7 @@ Contributors: juliobox
 Tags: autoupdate
 Requires at least: 3.7
 Tested up to: 3.8-alpha
-Stable tag: 1.5
+Stable tag: 1.5.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ Bonus : you can force an autoupdate with 1 single click.
 8. Another theme, now allowed for auto updates
 
 == Changelog ==
+
+= 1.5.1 =
+* 13 nov 2013
+* Force usage of dirname( __FILE__ ) in include_once.
 
 = 1.5 =
 * 13 nov 2013
