@@ -1,299 +1,266 @@
+# Copyright (C) 2013 BAW Auto Updates Manager
+# This file is distributed under the same license as the BAW Auto Updates Manager package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Auto Updates Manager\n"
+"Project-Id-Version: BAW Auto Updates Manager 1.5.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/baw-auto-updates-"
 "manager\n"
 "POT-Creation-Date: 2013-11-20 17:43:42+00:00\n"
-"PO-Revision-Date: 2013-11-20 18:51+0100\n"
-"Last-Translator: FxB <fx@fxbenard.com>\n"
-"Language-Team: Juliobox <juliobosk@gmail.com>\n"
-"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.7\n"
-"X-Poedit-SearchPath-0: ..\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: baw-auto-updates-manager.php:186
 msgid "An error has occurred. Please reload the page and try again."
 msgstr ""
-"Une erreur est survenue. Veuillez recharger la page et faîtes une nouvelle "
-"tentative."
 
 #: baw-auto-updates-manager.php:200
 msgid "Settings"
-msgstr "Paramètres"
+msgstr ""
 
 #: baw-auto-updates-manager.php:250
 msgid "Activation"
-msgstr "Activation"
+msgstr ""
 
 #: baw-auto-updates-manager.php:252
 msgid "Stable versions"
-msgstr "Versions stables"
+msgstr ""
 
 #: baw-auto-updates-manager.php:254
 msgid "Nightly builds"
-msgstr "Version dev."
+msgstr ""
 
 #: baw-auto-updates-manager.php:256
 msgid "Plugins"
-msgstr "Plugins"
+msgstr ""
 
 #: baw-auto-updates-manager.php:258
 msgid "Themes"
-msgstr "Thèmes"
+msgstr ""
 
 #: baw-auto-updates-manager.php:260
 msgid "Translations"
-msgstr "Traductions"
+msgstr ""
 
 #: baw-auto-updates-manager.php:262
 msgid "SVN Checkouts"
-msgstr "Checkout SVN"
+msgstr ""
 
 #: baw-auto-updates-manager.php:264
 msgid "Emails"
-msgstr "E-mails"
+msgstr ""
 
 #: baw-auto-updates-manager.php:271
 msgid "ERROR:"
-msgstr "ERREUR&nbsp;:"
+msgstr ""
 
 #: baw-auto-updates-manager.php:271
 msgid ""
 "This site <strong>is not</strong> able to apply these updates automatically."
 msgstr ""
-"Ce site <strong>ne peut pas</strong> appliquer ces mises à jour "
-"automatiquement."
 
 #: baw-auto-updates-manager.php:277
 msgid "Launch an autoupdate now."
-msgstr "Lancer une mise à jour automatique maintenant"
+msgstr ""
 
 #: baw-auto-updates-manager.php:309
 msgid "If you need, you can easily disable all automatic updates."
 msgstr ""
-"Si vous avez besoin, vous pouvez facilement désactiver toutes les mises à "
-"jour automatiques."
 
 #: baw-auto-updates-manager.php:310
 msgid "Deactivate now, all future automatic updates."
-msgstr "Désactive maintenant, toutes les mises à jour automatiques futures."
+msgstr ""
 
 #: baw-auto-updates-manager.php:311
 msgid "Let the automatic updates do their job! <em>(Default)</em>"
 msgstr ""
-"Laisser les mises à jour automatiques faire leur travail ! <em>(Par défaut)</"
-"em>"
 
 #: baw-auto-updates-manager.php:315
 msgid "<code>AUTOMATIC_UPDATER_DISABLED</code> is set to TRUE."
-msgstr "<code>AUTOMATIC_UPDATER_DISABLED</code> est réglée sur TRUE."
+msgstr ""
 
 #: baw-auto-updates-manager.php:317
 msgid "<code>AUTOMATIC_UPDATER_DISABLED</code> is set to FALSE."
-msgstr "<code>AUTOMATIC_UPDATER_DISABLED</code> est réglée sur FALSE."
+msgstr ""
 
 #: baw-auto-updates-manager.php:319
 msgid "<code>AUTOMATIC_UPDATER_DISABLED</code> is not set."
-msgstr "<code>AUTOMATIC_UPDATER_DISABLED</code> n'est pas utilisée."
+msgstr ""
 
 #: baw-auto-updates-manager.php:323
 msgid "<b>Automatic updates</b> currently are : "
-msgstr "<b>Les mises à jour automatiques</b> sont actuellement : "
+msgstr ""
 
 #: baw-auto-updates-manager.php:324
 msgid "<span style=\"color:red;font-weight:bold\">DISABLED</span>"
-msgstr "<span style=\"color:red;font-weight:bold\">DÉSACTIVÉES</span>"
+msgstr ""
 
 #: baw-auto-updates-manager.php:324
 msgid "<span style=\"color:green;font-weight:bold\">ENABLED</span>"
-msgstr "<span style=\"color:green;font-weight:bold\">ACTIVÉES</span>"
+msgstr ""
 
 #: baw-auto-updates-manager.php:344 baw-auto-updates-manager.php:367
 #: baw-auto-updates-manager.php:408 baw-auto-updates-manager.php:419
 #: baw-auto-updates-manager.php:431
 msgid "What kind of updates do you need for the <b>%s</b>?"
-msgstr "Quel genre de mises à jour avez-vous besoin pour <b>%s</b> ?"
+msgstr ""
 
 #: baw-auto-updates-manager.php:344 baw-auto-updates-manager.php:345
 msgid "core"
-msgstr "le core"
+msgstr ""
 
 #: baw-auto-updates-manager.php:345 baw-auto-updates-manager.php:432
 msgid "Never update %s automatically."
-msgstr "Ne jamais mettre à jour automatiquement %s."
+msgstr ""
 
 #: baw-auto-updates-manager.php:346
 msgid "Update automatically only minor versions. <em>(Default)</em>"
 msgstr ""
-"Mettre à jour automatiquement seulement les versions mineures. <em>(Par "
-"défaut)</em>"
 
 #: baw-auto-updates-manager.php:347 baw-auto-updates-manager.php:411
 #: baw-auto-updates-manager.php:422
 msgid "Always update all %s automatically."
-msgstr "Toujours mettre à jour tous(tes) %s automatiquement."
+msgstr ""
 
 #: baw-auto-updates-manager.php:347
 msgid "versions"
-msgstr "les versions"
+msgstr ""
 
 #: baw-auto-updates-manager.php:356
 msgid "Do you need to do <b>SVN Checkouts</b>?"
-msgstr "Avez-vous besoin des <b>Checkouts SVN</b> ?"
+msgstr ""
 
 #: baw-auto-updates-manager.php:357
 msgid "I don't want to update via SVN anymore."
-msgstr "je ne veux plus des mises à jour via SVN."
+msgstr ""
 
 #: baw-auto-updates-manager.php:358
 msgid "I want to auto update via SVN. <em>(Default)</em>"
-msgstr "Je veux mettre à jour automatiquement via SVN. <em>(Par défaut)</em>"
+msgstr ""
 
 #: baw-auto-updates-manager.php:367
 msgid "nightly builds"
-msgstr "les versions de développement"
+msgstr ""
 
 #: baw-auto-updates-manager.php:368
 msgid "I don't need or not use developer versions. <em>(Default)</em>"
 msgstr ""
-"Je n'ai pas besoin ou n'utilise pas les versions de développement. <em>(Par "
-"défaut)</em>"
 
 #: baw-auto-updates-manager.php:369
 msgid "I want to auto update developer versions."
-msgstr "Je veux mettre à jour les versions de développement."
+msgstr ""
 
 #: baw-auto-updates-manager.php:373
 msgid "You are using a development version of WordPress."
-msgstr "Vous utilisez une version de développement de WordPress."
+msgstr ""
 
 #: baw-auto-updates-manager.php:375
 msgid ""
 "You aren't using a development version of WordPress., so no nightly builds "
 "updates can be performed."
 msgstr ""
-"Vous n'utilisez pas une version de développement de WordPress., les mises à "
-"jour du code ne pourrons pas être lancées."
 
 #: baw-auto-updates-manager.php:393
 msgid "Do you want to receive an email for ..."
-msgstr "Voulez-vous recevoir un e-mail pour ..."
+msgstr ""
 
 #: baw-auto-updates-manager.php:394
 msgid "Sorry, i don't want any mail."
-msgstr "Désolé, je ne veux aucun e-mail."
+msgstr ""
 
 #: baw-auto-updates-manager.php:395
 msgid "... this cases: <em>(All by Default, check 1 or more box below)</em>"
 msgstr ""
-"... ces cas : <em>(Tout par défaut, cocher 1 ou plusieurs choix ci-dessous)</"
-"em>"
 
 #: baw-auto-updates-manager.php:397
 msgid "For successful updates."
-msgstr "Pour les mises à jour avec succès."
+msgstr ""
 
 #: baw-auto-updates-manager.php:398
 msgid "For failed updates."
-msgstr "Pour les mises à jour ratées."
+msgstr ""
 
 #: baw-auto-updates-manager.php:399
 msgid "For critical updates."
-msgstr "Pour les mises à jour en erreur critique."
+msgstr ""
 
 #: baw-auto-updates-manager.php:400
 msgid "Send me an extra debug mail. <em>(Default if Nightly build)</em>"
 msgstr ""
-"Envoyer en plus un e-mail de débug <em>(Par défaut si version dev.)</em>"
 
 #: baw-auto-updates-manager.php:408 baw-auto-updates-manager.php:409
 #: baw-auto-updates-manager.php:411
 msgid "plugins"
-msgstr "les plugins"
+msgstr ""
 
 #: baw-auto-updates-manager.php:409 baw-auto-updates-manager.php:420
 msgid "Never update %s automatically. <em>(Default)</em>"
-msgstr "Ne jamais mettre à jour automatiquement %s. <em>(Par défaut)</em>"
+msgstr ""
 
 #: baw-auto-updates-manager.php:410 baw-auto-updates-manager.php:421
 msgid "Update automatically only <a href=\"%s\">the chosen one</a>."
 msgstr ""
-"Mettre à jour automatiquement seulement <a href=\"%s\">ceux choisis</a>."
 
 #: baw-auto-updates-manager.php:419
 msgid "theme"
-msgstr "les thèmes"
+msgstr ""
 
 #: baw-auto-updates-manager.php:420 baw-auto-updates-manager.php:422
 msgid "themes"
-msgstr "les thèmes"
+msgstr ""
 
 #: baw-auto-updates-manager.php:431 baw-auto-updates-manager.php:432
 #: baw-auto-updates-manager.php:433
 msgid "translations"
-msgstr "les traductions"
+msgstr ""
 
 #: baw-auto-updates-manager.php:433
 msgid "Always update all %s automatically. <em>(Default)</em>"
 msgstr ""
-"Toujours mettre à jour tous(tes) %s automatiquement. <em>(Par défaut)</em>"
 
 #: baw-auto-updates-manager.php:574 baw-auto-updates-manager.php:578
 msgid ""
 "An unexpected error occurred. Something may be wrong with Auto Updates "
 "Manager or this server&#8217;s configuration."
 msgstr ""
-"Une erreur inattendue est survenue. Il pourrait y avoir un problème avec "
-"Auto Updates Manager ou la configuration de ce serveur.Un"
 
 #: inc/pointers.php:91
 msgid "[Dashboard] Find here the new auto-updates settings."
 msgstr ""
-"[Tableau de bord] Retrouvez ici les nouveaux paramètres pour les mises à "
-"jour automatiques."
 
 #: inc/updater.php:431
 msgid ""
 "The plugin has been updated, but could not be reactivated. Please reactivate "
 "it manually."
 msgstr ""
-"Ce plugin a été is à jour, mais n'a pas pu être réactivé. Merci de le "
-"réactiver manuellement."
 
 #: inc/updater.php:432
 msgid "Plugin reactivated successfully."
-msgstr "Plugin réactivé avec succès."
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "BAW Auto Updates Manager"
-msgstr "BAW Auto Updates Manager"
+msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid ""
 "http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-"
 "automatiques-7714.html"
 msgstr ""
-"http://boiteaweb.fr/auto-updates-manager-gerer-facilement-mises-a-jour-"
-"automatiques-7714.html"
 
 #. Description of the plugin/theme
 msgid ""
 "You can now select which plugin and theme can be autoupdated, just check "
 "this box! &mdash;&mdash;&rarr;"
 msgstr ""
-"Vous pouvez maintenant slectionner quelles extensions et thèmes peuvent être "
-"mis à jour automatiquement, juste cochez cette case !&mdash;&mdash;&rarr;"
 
 #. Author of the plugin/theme
 msgid "Julio Potier"
-msgstr "Julio Potier"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://boiteaweb.fr"
-msgstr "http://boiteaweb.fr"
+msgstr ""
